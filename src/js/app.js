@@ -14,7 +14,7 @@ export default class Team {
   }
 
   add(newMember) {
-    if ([...this.members].includes(newMember)) {
+    if (this.members.has(newMember)) {
       throw new Error('Игрок уже включен в команду!');
     }
     this.members.add(newMember);
